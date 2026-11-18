@@ -1,0 +1,15 @@
+{"question": "How many vacation days do full-time employees get each year?", "expected_source": "vacation-policy.md"}
+{"question": "Can unused vacation be carried over to the next year?", "expected_source": "vacation-policy.md"}
+{"question": "How far in advance must I request two weeks off?", "expected_source": "vacation-policy.md"}
+{"question": "How quickly must the on-call engineer acknowledge a severity 1 page?", "expected_source": "incident-response.md"}
+{"question": "When is the postmortem due after an incident is resolved?", "expected_source": "incident-response.md"}
+{"question": "Who decides whether to roll back during an outage?", "expected_source": "incident-response.md"}
+{"question": "Who has to approve a promotion from staging to production?", "expected_source": "deployment-guide.md"}
+{"question": "What share of traffic does a canary release receive first?", "expected_source": "deployment-guide.md"}
+{"question": "Are we allowed to deploy on a Friday afternoon?", "expected_source": "deployment-guide.md"}
+{"question": "Is a text message code accepted for multi-factor authentication?", "expected_source": "security-policy.md"}
+{"question": "What should I do if my laptop is stolen?", "expected_source": "security-policy.md"}
+{"question": "How long does elevated access to production last?", "expected_source": "security-policy.md"}
+{"question": "What is the hotel limit per night in a capital city?", "expected_source": "expenses.md"}
+{"question": "Do I need to keep receipts for meals while travelling?", "expected_source": "expenses.md"}
+{"question": "How much is the yearly training budget?", "expected_source": "expenses.md"}
