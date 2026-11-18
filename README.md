@@ -24,20 +24,7 @@ Before a first deployment, check the two points marked in [Known gaps](#known-ga
 
 ## Architecture
 
-```mermaid
-flowchart LR
-  subgraph Ingestion
-    S3[(S3 documents)] --> SQS[SQS queue] --> L[Lambda ingest]
-    L --> E[Bedrock embeddings]
-  end
-  L --> OS[(OpenSearch Serverless<br/>vector index)]
-  subgraph Questions
-    U[User] --> GW[API Gateway<br/>Cognito JWT] --> F[ECS Fargate<br/>agent API]
-    F --> C[Bedrock: Claude]
-  end
-  F --> OS
-  F --> DB[(DynamoDB history)]
-```
+![Architecture: S3, SQS and Lambda ingest documents into OpenSearch Serverless; API Gateway, a load balancer and ECS Fargate serve the agent, which uses OpenSearch, Bedrock and DynamoDB](docs/architecture.svg)
 
 **Ingestion.** An object created in the bucket puts an event on the queue. The Lambda function downloads the file, extracts the text (`.md`, `.txt`, `.pdf`), splits it into overlapping chunks, embeds each chunk and writes it to the vector index. Failed messages are retried three times, then moved to a dead-letter queue.
 
